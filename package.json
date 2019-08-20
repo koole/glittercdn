@@ -2,7 +2,7 @@
   "name": "glittercdn",
   "version": "1.0.0",
   "description": "",
-  "main": "images.js",
+  "main": "cleanup.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

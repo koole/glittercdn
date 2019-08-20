@@ -11,3 +11,6 @@ yarn-error.log*
 
 # Dependency directorie
 node_modules/
+
+# Images folder after building
+public/

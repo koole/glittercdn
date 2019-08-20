@@ -1,0 +1,8 @@
+[build]
+  publish = "public/"
+  command = "mkdir public && find ./glitters -name '*.jpg' -o -name '*.png' -o -name '*.gif' -exec cp '{}' ./public \; && cp ./glitters/images.json ./public/images.json"
+
+[[redirects]]
+  from = "/"
+  to = "https://github.com/koole/glittercdn"
+  status = 301
