@@ -9,20 +9,7 @@ const removeBig = false;
 // Settings
 const imageFolder = "./public";
 const folders = [
-  "generic",
-  "mon",
-  "tue",
-  "wed",
-  "thu",
-  "fri",
-  "sat",
-  "sun",
-  "new-year",
-  "easter",
-  "liberation",
-  "valentine",
-  "halloween",
-  "christmas"
+  "generic"
 ];
 const fileName = "images.json";
 
