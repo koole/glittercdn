@@ -1,6 +1,6 @@
 [build]
   publish = "public/"
-  command = "mkdir public && find ./glitters \( -iname '*.jpg' -o -iname '*.png' -o -iname '*.gif' \) -exec cp '{}' ./public \; && cp ./glitters/images.json ./public/images.json"
+  command = "mkdir public && find ./glitters \\( -iname '*.jpg' -o -iname '*.png' -o -iname '*.gif' \\) -exec cp '{}' ./public \; && cp ./glitters/images.json ./public/images.json"
 
 [[redirects]]
   from = "/"
