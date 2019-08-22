@@ -5,6 +5,8 @@
 
 ### _The central glitter graphics repository_
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/842f183e-b2bd-4ccf-bb1e-3335282ae92e/deploy-status)](https://app.netlify.com/sites/glittercdn/deploys)
+
 <br>
 <br>
 </div>
