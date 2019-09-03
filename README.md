@@ -6,6 +6,7 @@
 ### _The central glitter graphics repository_
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/842f183e-b2bd-4ccf-bb1e-3335282ae92e/deploy-status)](https://app.netlify.com/sites/glittercdn/deploys)
+![Test Status](https://github.com/koole/glittercdn/workflows/Tests/badge.svg)
 
 <br>
 <br>
@@ -38,7 +39,10 @@ If you're using Glitterbot and don't like the Glitterplaatjes (what?!), Glitterb
 
 3. Run `node cleanup.js` to generate a new `images.json` for your images.
 
-4. Either deploy using Netlify or run the following command to create a public folder to upload to your own server:
-```
-mkdir public && find ./glitters -name '*.jpg' -o -name '*.png' -o -name '*.gif' -exec cp '{}' ./public \\; && cp ./glitters/images.json ./public/images.json
-```
+4. (optional) Run `yarn run test` to make sure all images are going to work properly.
+
+5. Either deploy using Netlify or run the following command to create a public folder to upload to your own server:
+
+   ```
+   mkdir public && find ./glitters -name '*.jpg' -o -name '*.png' -o -name '*.gif' -exec cp '{}' ./public \\; && cp    ./glitters/images.json ./public/images.json
+   ```
