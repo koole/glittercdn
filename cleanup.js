@@ -7,7 +7,7 @@ const { crc32 } = require('crc');
 const removeBig = false;
 
 // Settings
-const imageFolder = "./public";
+const imageFolder = "./glitters";
 const folders = [
   "generic",
   "mon",
@@ -32,7 +32,7 @@ for (const folder of folders) {
   let images = [];
   const files = fs.readdirSync(`${imageFolder}/${folder}`);
   for (const file of files) {
-    if (file.match(/\.((?:gif|jpg|jpeg|png))(?:[\?#]|$)/i)) {
+    if (file.match(/\.((?:gif|jpg|png))(?:[\?#]|$)/i)) {
       const path = `${imageFolder}/${folder}`;
       const hash = crc32(fs.readFileSync(`${path}/${file}`, "utf8")).toString(
         16

@@ -4,7 +4,7 @@
   "description": "",
   "main": "cleanup.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "ava test.js"
   },
   "repository": {
     "type": "git",
@@ -20,5 +20,8 @@
     "crc": "^3.8.0",
     "jimp": "^0.6.4",
     "readimage": "^1.1.1"
+  },
+  "devDependencies": {
+    "ava": "^2.3.0"
   }
 }
