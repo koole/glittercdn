@@ -3,9 +3,6 @@ const readimage = require("readimage");
 const Jimp = require("jimp");
 const { crc32 } = require('crc');
 
-// Set this to true if you want to remove all images larger than 2MB
-const removeBig = false;
-
 // Settings
 const imageFolder = "./glitters";
 const folders = [
@@ -75,16 +72,6 @@ for (const folder of folders) {
       } else {
         fs.renameSync(`${path}/${file}`, `${path}/${name}`);
         images.push(name);
-      }
-
-      // Check for filesize, see issue #1
-      const { size } = fs.statSync(`${path}/${name}`);
-      if (size > 2000000) {
-        console.log(`Warning! Size of ${name} is too large!`);
-        if (removeBig) {
-          console.log("File removed");
-          fs.unlinkSync(name);
-        }
       }
     }
   }

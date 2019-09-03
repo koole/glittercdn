@@ -33,7 +33,7 @@ For more information about Glitterbot, visit the [Glitterbot website](https://gl
 If you're using Glitterbot and don't like the Glitterplaatjes (what?!), Glitterbot can also send your team your own custom images. 
 
 1. Replace the images in the `glitters` folder with your own images.
-  **Make sure to maintain the existing folder structure.** Place images meant for specific days in the folders for these days (`glitters/mon` for monday, `glitters/tue` for tuesday). Place generic images that could be sent on any morning in the `glitters/generic` folder. Images should not be larger than 2MB, otherwise they won't automatically expand in Slack. To automatically remove bigger images, set `removeBig` to `true` in `cleanup.js`.
+  **Make sure to maintain the existing folder structure.** Place images meant for specific days in the folders for these days (`glitters/mon` for monday, `glitters/tue` for tuesday). Place generic images that could be sent on any morning in the `glitters/generic` folder. Images should not be larger than 2MB, otherwise they won't automatically expand in Slack.
 
 2. Install dependencies by running `yarn install` or `npm install`.
 

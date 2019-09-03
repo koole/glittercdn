@@ -113,3 +113,16 @@ test.cb("Test if images.json matches the files", t => {
 
   t.end();
 });
+
+// Check for filesize, see issue #1
+test.cb("Test if images are small enough", t => {
+  for (const { file, path } of allFiles()) {
+    const { size } = fs.statSync(`${path}/${file}`);
+    if (size > 2000000) {
+      t.fail(`Warning! Size of ${file} is too large!`);
+    } else {
+      t.pass();
+    }
+  }
+  t.end();
+})
