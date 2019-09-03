@@ -6,3 +6,8 @@
   from = "/"
   to = "https://github.com/koole/glittercdn"
   status = 301
+  
+[[redirects]]
+  from = "/*"
+  to="/189368ce.gif"
+  status = 200
