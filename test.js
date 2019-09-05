@@ -19,7 +19,8 @@ const folders = [
   "liberation",
   "valentine",
   "halloween",
-  "christmas"
+  "christmas",
+  "welcome"
 ];
 const indexFile = "images.json";
 
