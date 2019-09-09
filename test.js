@@ -3,7 +3,6 @@ import fs from "fs";
 
 const readimage = require("readimage");
 const { crc32 } = require("crc");
-const stringToEmoji = require('./string_to_emoji')
 
 const imageFolder = "./glitters";
 const folders = [
@@ -40,10 +39,9 @@ const allFiles = () => {
 test.cb("Test if files are hashed correctly", t => {
   for (const { file, path } of allFiles()) {
     const hash = crc32(fs.readFileSync(`${path}/${file}`, "utf8")).toString(16);
-    const emojiHash = stringToEmoji(hash);
     t.is(
       file,
-      emojiHash + "." + file.split(".").pop(),
+      hash + "." + file.split(".").pop(),
       `${path}/${file} is not hashed correctly. Please run cleanup.js.`
     );
   }

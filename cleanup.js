@@ -2,7 +2,6 @@ const fs = require("fs");
 const readimage = require("readimage");
 const Jimp = require("jimp");
 const { crc32 } = require('crc');
-const stringToEmoji = require('./string_to_emoji')
 
 // Settings
 const imageFolder = "./glitters";
@@ -36,9 +35,8 @@ for (const folder of folders) {
       const hash = crc32(fs.readFileSync(`${path}/${file}`, "utf8")).toString(
         16
       );
-      const emojiHash = stringToEmoji(hash);
       const filetype = file.split(".").pop();
-      const name = `${emojiHash}.${filetype}`;
+      const name = `${hash}.${filetype}`;
 
       // Check if gifs have multiple frames
       if (filetype == "gif") {
