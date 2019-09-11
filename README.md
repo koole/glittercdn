@@ -20,13 +20,13 @@ For more information about Glitterbot, visit the [Glitterbot website](https://gl
 
 1. Fork and clone the repo to your own machine.
 
-2. Add your own Glitterplaatjes to the correct folders. Images should not be larger than 2MB, otherwise they won't automatically expand in Slack. To automatically remove bigger images, set `removeBig` to `true` in `cleanup.js`.
+2. Add your own Glitterplaatjes to the correct folders. Images should not be larger than 2MB, otherwise they won't automatically expand in Slack.
 
 3. Install dependencies by running `yarn install` or `npm install`.
 
 4. Run `node cleanup.js` to optimise your newly added Glitterplaatjes and generate an updated `images.json` file.
 
-5. Submit a pull request with your changes to our repository.
+5. Submit a pull request with your changes to this repository.
 
 ## Using your own images
 
