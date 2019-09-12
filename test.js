@@ -1,9 +1,10 @@
 import test from "ava";
 import fs from "fs";
+import axios from "axios";
+import readimage from "readimage";
+import { crc32 } from "crc";
 
-const readimage = require("readimage");
-const { crc32 } = require("crc");
-
+const source = "https://super.vette.website";
 const imageFolder = "./glitters";
 const folders = [
   "generic",
@@ -126,4 +127,24 @@ test.cb("Test if images are small enough", t => {
     }
   }
   t.end();
-})
+});
+
+test(
+  "Test if there aren't less images than there are currently live",
+  async t => {
+    const newFileLength = allFiles().length;
+    let currentFileLength = 0;
+    try {
+      const { data } = await axios.get(`${source}/images.json`);
+      for (const folder of folders) {
+        currentFileLength += data[folder].length;
+      }
+      t.true(
+        newFileLength >= currentFileLength,
+        "There are less glitterplaatjes in this version than there are currenctly online. If you have removed glitterplaatjes, please also add new ones."
+      );
+    } catch(e) {
+      t.fail(e)
+    }
+  }
+);
