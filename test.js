@@ -138,11 +138,7 @@ test(
     try {
       const { data } = await axios.get(`${source}/images.json`);
       for (const folder of folders) {
-        if (data.hasOwnProperty(folder)) {
-          currentFileLength += data[folder].length;
-        } else {
-          currentFileLength = 0;
-        }
+        currentFileLength += data[folder].length;
       }
       t.true(
         newFileLength >= currentFileLength,
