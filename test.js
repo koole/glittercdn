@@ -21,7 +21,8 @@ const folders = [
   "valentine",
   "halloween",
   "christmas",
-  "welcome"
+  "welcome",
+  "congratulations"
 ];
 const indexFile = "images.json";
 
@@ -137,7 +138,11 @@ test(
     try {
       const { data } = await axios.get(`${source}/images.json`);
       for (const folder of folders) {
-        currentFileLength += data[folder].length;
+        if (data.hasOwnProperty(folder)) {
+          currentFileLength += data[folder].length;
+        } else {
+          currentFileLength = 0;
+        }
       }
       t.true(
         newFileLength >= currentFileLength,

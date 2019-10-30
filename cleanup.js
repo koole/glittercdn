@@ -20,7 +20,8 @@ const folders = [
   "valentine",
   "halloween",
   "christmas",
-  "welcome"
+  "welcome",
+  "congratulations"
 ];
 const fileName = "images.json";
 
