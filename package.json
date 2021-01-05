@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/koole/glittercdn#readme",
   "dependencies": {
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "crc": "^3.8.0",
     "jimp": "^0.6.4",
     "readimage": "^1.1.1"
