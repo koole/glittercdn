@@ -4,7 +4,7 @@
   "description": "",
   "main": "cleanup.js",
   "scripts": {
-    "test": "ava test.js -s"
+    "test": "ava test.js --timeout=2m"
   },
   "repository": {
     "type": "git",
