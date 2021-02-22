@@ -11,3 +11,9 @@
   from = "/*"
   to="/189368ce.gif"
   status = 200
+
+[[headers]]
+  # Define which paths this specific [[headers]] block will cover.
+  for = "/images.json"
+    [headers.values]
+    Access-Control-Allow-Origin = "*"
