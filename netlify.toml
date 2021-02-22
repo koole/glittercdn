@@ -4,7 +4,7 @@
 
 [[redirects]]
   from = "/"
-  to = "https://github.com/koole/glittercdn"
+  to = "https://glitterbot.dekoolecentrale.nl"
   status = 301
   
 [[redirects]]
