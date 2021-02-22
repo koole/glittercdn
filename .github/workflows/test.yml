@@ -12,9 +12,9 @@ jobs:
     - name: Use Node.js 14
       uses: actions/setup-node@v1
       with:
-        version: 14
+        node-version: 14
         
-    - name: yarn install and run tests
+    - name: npm install and run tests
       run: |
-        yarn install
-        yarn run test
+        npm install
+        npm run test
