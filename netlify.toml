@@ -2,6 +2,9 @@
   publish = "public/"
   command = "mkdir public && find ./glitters \\( -iname '*.jpg' -o -iname '*.png' -o -iname '*.gif' \\) -exec cp '{}' ./public \\; && cp ./glitters/images.json ./public/images.json"
 
+[build.environment]
+  NODE_VERSION = "14"
+
 [[redirects]]
   from = "/"
   to = "https://glitterbot.dekoolecentrale.nl"

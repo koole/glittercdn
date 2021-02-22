@@ -1,8 +1,8 @@
-import test from "ava";
-import fs from "fs";
-import axios from "axios";
-import readimage from "readimage";
-import { crc32 } from "crc";
+const test = require("ava");
+const fs = require("fs");
+const axios = require("axios");
+const readimage = require("readimage");
+const { crc32 } = require("crc");
 
 const source = "https://super.vette.website";
 const imageFolder = "./glitters";

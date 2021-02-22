@@ -1,5 +1,5 @@
 <div align="center">
-<img src="https://glitterbot.appmantle.com/logo.png" width="256px">
+<img src="https://glitterbot.dekoolecentrale.nl/logo.png" width="256px">
 
 # GlitterCDN
 
@@ -14,7 +14,7 @@
 
 This repo contains a list of Glitterplaatjes which are used by both Glitterbot for Slack and Glitterbot for Telegram. Changes to this repository are automatically deployed and all Glitterbots will be using 
 
-For more information about Glitterbot, visit the [Glitterbot website](https://glitterbot.appmantle.com/) or the [Glitterbot for Slack](https://github.com/appmantle/glitterbot) GitHub repository.
+For more information about Glitterbot, visit the [Glitterbot website](https://glitterbot.dekoolecentrale.nl/) or the [Glitterbot for Slack](https://github.com/koole/glitterbot) GitHub repository.
 
 ## Adding new Glitterplaatjes
 
