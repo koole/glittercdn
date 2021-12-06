@@ -31,13 +31,13 @@ for (const folder of folders) {
   let images = [];
   const files = fs.readdirSync(`${imageFolder}/${folder}`);
   for (const file of files) {
-    if (file.match(/\.((?:gif|jpg|png))(?:[\?#]|$)/i)) {
+    if (file.match(/\.((?:gif|jpg|jpeg|png))(?:[\?#]|$)/i)) {
       const path = `${imageFolder}/${folder}`;
       const hash = crc32(fs.readFileSync(`${path}/${file}`, "utf8")).toString(
         16
       );
       const filetype = file.split(".").pop();
-      const name = `${hash}.${filetype}`;
+      let name = `${hash}.${filetype}`;
 
       // Check if gifs have multiple frames
       if (filetype == "gif") {
@@ -72,6 +72,10 @@ for (const folder of folders) {
         });
         // Rename all non gif files right away
       } else {
+        // Rename jpeg files to jpg
+        if(filetype == "jpeg"){
+          name = `${hash}.jpg`;
+        }
         fs.renameSync(`${path}/${file}`, `${path}/${name}`);
         images.push(name);
       }
